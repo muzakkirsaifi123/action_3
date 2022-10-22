@@ -14,7 +14,7 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-        
+
     - name: dokcer build image for csharp
       run : |
         docker build ./c# -t muzakkirsaifi/csharp:1.0
@@ -27,5 +27,11 @@ jobs:
     - name: docker image for the python
       run: |
         docker build ./python -t muzakkirsaifi/python:1.0
+
+    - name: Docekr push the image
+      run : |
+        docker push muzakkirsaifi/csharp:1.0
+        docker push muzakkirsaifi/nodejs:1.0
+        docker push muzakkirsaifi/python:1.0
 
 
