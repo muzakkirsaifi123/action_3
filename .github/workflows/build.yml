@@ -8,6 +8,13 @@ jobs:
 
     steps: 
     - uses: actions/checkout@v3
+    - name: docker login  
+      env: 
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        
     - name: dokcer build image for csharp
       run : |
         docker build ./c# -t muzakkirsaifi/csharp:1.0
