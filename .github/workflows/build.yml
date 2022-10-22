@@ -11,9 +11,9 @@ jobs:
     - name: dokcer build image for csharp
       run : |
         docker build ./c# -t muzakkirsaifi/csharp:1.0
-    - name: docker image for the golang
-      run: |
-        docker build ./golang -t muzakkirsaifi/golang:1.0
+    # - name: docker image for the golang
+    #   run: |
+    #     docker build ./golang -t muzakkirsaifi/golang:1.0
     - name: docker image for the nodejs
       run: |
         docker build ./nodejs -t muzakkirsaifi/nodejs:1.0
