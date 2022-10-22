@@ -14,10 +14,10 @@ jobs:
     - name: docker image for the golang
       run: |
         docker build ./golang -t muzakkirsaifi/golang:1.0
-    - name: docker image for the golang
+    - name: docker image for the nodejs
       run: |
         docker build ./nodejs -t muzakkirsaifi/nodejs:1.0
-    - name: docker image for the golang
+    - name: docker image for the python
       run: |
         docker build ./python -t muzakkirsaifi/python:1.0
 
