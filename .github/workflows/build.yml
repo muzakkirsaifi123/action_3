@@ -1,1 +1,14 @@
+name: Docker image build
+
+on: [push]
+
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+
+    steps: 
+    - uses: actions/checkout@v3
+    - name: dokcer build image for csharp
+      run : |
+        docker build ./c# -t muzakkirsaifi/csharp:1.0
 
