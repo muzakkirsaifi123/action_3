@@ -12,6 +12,9 @@ jobs:
 
     steps: 
     - uses: actions/checkout@v3
+    - name: install docker in container
+      run: | 
+        sudo apt install docker.io
     - name: docker login  
       env: 
         DOCKER_USER: ${{secrets.DOCKER_USER}}
