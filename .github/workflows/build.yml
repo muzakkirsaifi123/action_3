@@ -5,6 +5,10 @@ on: [push]
 jobs: 
   build: 
     runs-on: ubuntu-latest
+    container: 
+      image: composer:latest
+      volumes: 
+          - my-app:/app
 
     steps: 
     - uses: actions/checkout@v3
